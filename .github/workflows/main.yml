@@ -12,6 +12,10 @@ jobs:
     steps:
       uses: mobaXterm/ssh-action@v23.2
       with:
-        host: 16.60.22.14
-        username: ubuntu
-        key: 
+        host: ${{ secrets.REMOTE_IP }}
+        username: ${{ secrets.REMOTE_USER }}
+        key: ${{ secrets.REMOTE_PEM_KEY }}
+        port: ${{ secrets.REMOTE_SSH_PORT }}
+        script:
+          cd /var/lib/jenkins/jenkins-deploy/chance_doe_repository
+          git pull
