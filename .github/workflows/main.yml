@@ -19,7 +19,7 @@ jobs:
         port: ${{ secrets.REMOTE_SSH_PORT }}
         script: 
           echo "START"
-          sudo cd /var/lib/jenkins/jenkins-deploy/chance_doe_repository
+          cd /var/lib/jenkins/jenkins-deploy/chance_doe_repository/
           
           echo "GIT PULL"
           sudo git pull
