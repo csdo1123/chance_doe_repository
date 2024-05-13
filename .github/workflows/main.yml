@@ -1,0 +1,17 @@
+name: deploy code test
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-24.04
+
+    steps:
+      uses: mobaXterm/ssh-action@v23.2
+      with:
+        host: 16.60.22.14
+        username: ubuntu
+        key: 
