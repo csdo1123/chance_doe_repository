@@ -11,7 +11,7 @@ jobs:
 
     steps:
     - name: excuting remote ssh commands
-      uses: mobaXterm/ssh-action@v23.2
+      uses: appleboy/ssh-action@master
       with:
         host: ${{ secrets.REMOTE_IP }}
         username: ${{ secrets.REMOTE_USER }}
