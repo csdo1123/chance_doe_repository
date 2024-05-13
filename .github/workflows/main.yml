@@ -18,5 +18,5 @@ jobs:
         key: ${{ secrets.REMOTE_PEM_KEY }}
         port: ${{ secrets.REMOTE_SSH_PORT }}
         script:
-          cd /var/lib/jenkins/jenkins-deploy/chance_doe_repository
+          sudo cd /var/lib/jenkins/jenkins-deploy/chance_doe_repository
           git pull
