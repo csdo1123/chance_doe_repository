@@ -17,6 +17,6 @@ jobs:
         username: ${{ secrets.REMOTE_USER }}
         key: ${{ secrets.REMOTE_PEM_KEY }}
         port: ${{ secrets.REMOTE_SSH_PORT }}
-          script: | # 실행될 스크립트
+          script: 
             cd /var/lib/jenkins/jenkins-deploy/chance_doe_repository
             git pull
