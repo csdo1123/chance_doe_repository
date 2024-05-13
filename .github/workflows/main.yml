@@ -13,10 +13,14 @@ jobs:
       - name: excuting remote ssh commands
         uses: appleboy/ssh-action@master # ssh 접속하는 오픈소스
         with:
-          host: ${{ secrets.REMOTE_IP }} # ec2 인스턴스 ip
-          username: ${{ secrets.REMOTE_USER }} # ubuntu 아이디
+          host: 13.60.22.14
+          # ${{ secrets.REMOTE_IP }} # ec2 인스턴스 ip
+          username: ubuntu
+          # ${{ secrets.REMOTE_USER }} # ubuntu 아이디
           key: ${{ secrets.REMOTE_PEM_KEY }} # ec2 인스턴스 pem key
-          port: ${{ secrets.REMOTE_SSH_PORT }} # 접속포트번호 (보통 22)
+          port: 22
+          # ${{ secrets.REMOTE_SSH_PORT }} # 접속포트번호 (보통 22)
+          timeout: 20
           script: | # 실행될 스크립트
             cd /var/lib/jenkins/jenkins-deploy/chance_doe_repository
             git pull
