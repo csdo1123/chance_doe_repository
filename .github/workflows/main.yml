@@ -2,14 +2,15 @@ name: deploy code test
 
 on:
   push:
-    branches:
-      - main
+    branches: [ main ]
 
 jobs:
   deploy:
+    name: deploy job
     runs-on: ubuntu-24.04
 
     steps:
+    - name: excuting remote ssh commands
       uses: mobaXterm/ssh-action@v23.2
       with:
         host: ${{ secrets.REMOTE_IP }}
