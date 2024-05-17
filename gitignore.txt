@@ -1,0 +1,51 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Mac desktop service store files
+.DS_Store
+
+# Pycharm files
+.idea/
+
+# virture env direcotry
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# pypython history file
+.ptpython_history
+
+# Celery stuff
+celerybeat-schedule
+celerybeat.pid
+
+# pyenv
+.python-version
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# profiler result file
+fastapi-profiler.html
+sqltap-report.html
+
+# VS CODE files
+.vscode/*
